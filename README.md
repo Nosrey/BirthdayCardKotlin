@@ -1,32 +1,35 @@
-# Happy Birthday App
+# HappyBirthday Android App
 
-Esta es una aplicación de Android desarrollada en Kotlin y Java que muestra un mensaje de cumpleaños personalizado.
+Este proyecto es una aplicación de Android desarrollada en Kotlin utilizando Jetpack Compose. La aplicación muestra un mensaje de felicitación de cumpleaños en la pantalla.
 
-## Descripción
+## Características
 
-La aplicación muestra un mensaje de cumpleaños personalizado en una tarjeta de cumpleaños. El mensaje y el remitente se pueden personalizar en el código.
+- La aplicación muestra una imagen y un mensaje de felicitación.
+- El mensaje de felicitación incluye el texto del mensaje y el nombre del remitente.
+- La aplicación utiliza Jetpack Compose para la interfaz de usuario.
 
-## Instalación
+## Código
 
-Para instalar y ejecutar esta aplicación, necesitarás Android Studio. Sigue estos pasos:
+El punto de entrada de la aplicación es la clase `MainActivity`. En el método `onCreate`, se establece la interfaz de usuario para esta actividad utilizando el método `setContent`. Dentro de `setContent`, se aplica el `HappyBirthdayTheme`, que es un tema personalizado para la aplicación. La interfaz de usuario está envuelta dentro de un `Surface`, que es un bloque de construcción fundamental para el diseño de la interfaz de usuario en Jetpack Compose.
 
-1. Clona este repositorio en tu máquina local.
-2. Abre Android Studio y selecciona 'Open an existing Android Studio project'.
-3. Navega hasta el directorio donde clonaste el proyecto y selecciona el directorio raíz del proyecto.
-4. Espera a que Android Studio importe el proyecto y descargue las dependencias necesarias.
-5. Una vez que el proyecto se haya importado correctamente, puedes ejecutarlo en un emulador o en un dispositivo Android conectado.
+La función `GreetingImage` es una función componible que muestra una imagen y un texto de saludo. Utiliza un diseño `Box` para apilar a sus hijos. El composable `Image` se utiliza para mostrar una imagen, y el composable `GreetingText` se utiliza para mostrar el mensaje de saludo.
 
-## Tecnologías utilizadas
+La función `GreetingText` es otra función componible que muestra el mensaje de saludo y el nombre del remitente. Utiliza un diseño `Column` para organizar a sus hijos verticalmente. El composable `Text` se utiliza para mostrar el texto.
 
-- Kotlin
-- Java
-- Gradle
-- AndroidX
+Finalmente, la función `BirthdayCardPreview` es una función de vista previa que permite ver cómo se ven tus funciones componibles en la vista previa de Android Studio.
 
-## Contribuir
+## Requisitos
 
-Si deseas contribuir a este proyecto, por favor, abre un 'issue' o una 'pull request'.
+- Android Studio Arctic Fox | 2020.3.1 Patch 2 o superior.
+- Kotlin 1.5.10 o superior.
+- Gradle 7.0.2 o superior.
+
+## Cómo ejecutar
+
+1. Clona este repositorio.
+2. Abre el proyecto en Android Studio.
+3. Ejecuta la aplicación en un emulador o dispositivo Android.
 
 ## Licencia
 
-Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto está bajo la licencia MIT.
